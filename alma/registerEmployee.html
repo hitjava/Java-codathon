@@ -1,0 +1,53 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8"/> 
+        <title>Register an Employee Form</title> 
+
+        <script> 
+
+function displayRating(slider) { 
+document.getElementById("ratingValue").innerHTML = slider.value; 
+
+} 
+
+
+
+        </script> 
+        
+        <style type="text/css"> 
+            :required, :invalid { background-color: pink; } 
+            :valid { background-color: white; } 
+            </style> 
+            
+        
+</head> 
+ 
+    </form> 
+    <label for="fullName">Full Name:</label><br/> 
+<input type="text" name="fullName" id="fullName" placeholder="Enter 
+your full name" autofocus required />*<br/> 
+<label for="email">E-mail:</label><br/> 
+<input type="email" name="email" id="email" placeholder="Enter a valid 
+e-mail" required />*<br/>
+<label for="dateOfBirth">Date of Birth:</label><br/> 
+<input type="date" name="dateOfBirth" id="dateOfBirth" required />*<br/> 
+<label for="age">Age:</label><br/> 
+<input type="number" name="age" id="age" size="6" min="18" max="120" 
+step="1" value="21" /><br/> 
+<label for="rating">Years of Experience:</label><br/> 
+<input type="range" name="rating" id="rating" min="0" max="100" 
+step="1" value="0" onchange="displayRating(this);" />
+<span id="ratingValue">0</span>
+
+<br/> 
+
+<label for="phone">Phone:</label><br/> 
+<input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}- 
+[0-9]{4}" placeholder="XXX-XXX-XXXX" required />*<br/> 
+<a href="thankYou.html" >
+<input type="submit" value="Register" /> 
+</a>
+<p>Fields marked * are required.</p>
+ 
+</html> 
